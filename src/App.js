@@ -57,6 +57,7 @@ class App extends React.Component {
           <div className="container">
             <h2>Add Card</h2>
             <input
+                autofocus
                 type="text"
                 placeholder="Enter learning word"
                 value={this.state.word}
@@ -69,10 +70,10 @@ class App extends React.Component {
                 onChange={(e) => this.updateInput('translate', e.target.value)}
             />
             <button
-                className="btn add-btn"
+                className="btn"
                 onClick={() => this.addCard()}
             >
-              add
+              Add
             </button>
             <div>
               {this.state.cards.map(card => {
